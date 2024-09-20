@@ -7,13 +7,30 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
-    <div>
-      Filter Promoted Jobs
-      <select class="filter-promoted-jobs">
-        <option value="true">True</option>
-        <option value="false">Not Active</option>
-      </select>
-      <button id="save-settings">Save Settings</button> <!-- Save button -->
-    </div>
+    <section>
+      <div class="setting-container">
+        
+        <div id="filter-promoted-jobs-container">
+          <label for="filter-promoted-jobs">Filter Promoted Jobs?</label>
+          <select id="filter-promoted-jobs">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </div>
+
+        <div id="filter-companies-container">
+          <label for="filtered-company-input"> Exclude Company: </label>
+          <input type="text" id="filtered-company-input" class="search" onkeydown="addFilterCompany(this)"/> 
+          <ul id="filtered-company-list"></ul>
+        </div>
+
+        <div id="save-button-container">
+          <button id="save-settings">Save</button>
+        </div>
+       
+      </div>
+
+  </section>
+
   </body>
 </html>

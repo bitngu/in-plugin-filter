@@ -1,4 +1,57 @@
 * {
-    margin: 0
+    margin: 0;
+    padding: 0;
 }
 
+label {
+    color: #0a66c2;
+    font-size: 16px;
+}
+
+.setting-container {
+    min-width: 400px;
+    max-width: 500px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+#filter-promoted-jobs-container, #filter-companies-container{
+    margin: 15px;
+    width: 100%;
+}
+
+input[type=text], select {
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+#save-button-container {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+#save-settings {
+    width: 100px;
+    border: 0.08rem solid #0a66c2;
+    background-color: #ffff;
+    color: #0a66c2;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px 2px;    
+}
+
+#save-settings:hover{
+    color: #005580;
+    background-color: rgba(55, 143, 233, 0.2);
+    border: 1.5px solid #005580;
+
+}
