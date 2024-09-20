@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Linkedin Filters",
+    "description": "Linkedin additional filters to hide specific companies or promoted listings",
+    "version": "1.0",
+    "author": "Bi Nguyen",
+    "action": {
+      "default_popup": "landing-page.html",
+      "default_icon": "default_icon.png"
+    },
+    "background": {
+      "service_worker": "background.js",
+      "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*.linkedin.com/jobs/search/*"],
+            "js": ["filter.js"]
+        }
+    ],
+    "permissions": ["tabs", "storage"]
+  }
