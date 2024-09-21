@@ -17,6 +17,20 @@ chrome.tabs.onUpdated.addListener(
            }
        });
     }
-  }
-  );
+
+    if (changeInfo.status === 'complete') {
+        chrome.storage.sync.get(["filterPromotedJob", "filterViewedJob", "filteredCompanyList"], function (result) {
+            const filterPromotedJob = result.filterPromotedJob || '';
+            const filterViewedJob = result.filterViewedJob || '';
+            const filteredCompanyList = result.filteredCompanyList || [];
+            chrome.tabs.sendMessage(tabId, {
+                message: 'page loaded',
+                url: changeInfo.url,
+                filterPromotedJob: filterPromotedJob,
+                filterViewedJob: filterViewedJob,
+                filteredCompanyList: filteredCompanyList
+            });
+        });
+    };
+});
 

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Linkedin Filters",
-    "description": "Linkedin additional filters to hide specific companies or promoted listings",
+    "name": "In-Filter",
+    "description": "Plugin to hide specific companies or promoted listings on Linkedin",
     "version": "1.0",
     "author": "Bi Nguyen",
     "action": {
