@@ -2,14 +2,23 @@
 <html>
   <head>
     <title>In-Plugin-UI</title>
-    <meta name="description" content="Popup UI">
+    <meta name="description" content="Simple plugin to filter Linkined's promoted job listings and companies">
     <script src="popup.js" defer></script>
     <link rel="stylesheet" type="text/css" href="popup.css">
   </head>
   <body>
     <section>
+      <div class="banner">
+        <div id="banner-intro">
+          <h1> Remove Job Ads with In-Filter</h1>
+        </div>
+        <div id = 'close-popup'>
+          <div class="exit-bar" id="bar1"></div>
+          <div class="exit-bar" id="bar2"></div>
+        </div>
+      </div>
+
       <div class="setting-container">
-        
         <div id="filter-promoted-jobs-container">
           <label for="filter-promoted-jobs">Filter Promoted Jobs?</label>
           <select id="filter-promoted-jobs">
@@ -18,9 +27,17 @@
           </select>
         </div>
 
+        <div id="filter-viewed-jobs-container">
+          <label for="filter-viewed-jobs">Filter Viewed Jobs?</label>
+          <select id="filter-viewed-jobs">
+            <option value="false">No</option>
+            <option value="true">Yes</option>
+          </select>
+        </div>
+
         <div id="filter-companies-container">
           <label for="filtered-company-input"> Exclude Company: </label>
-          <input type="text" id="filtered-company-input" class="search" onkeydown="addFilterCompany(this)"/> 
+          <input type="text" id="filtered-company-input" class="search"/> 
           <ul id="filtered-company-list"></ul>
         </div>
 
